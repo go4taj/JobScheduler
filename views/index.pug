@@ -1,5 +1,22 @@
+doctype html
 html
   head
-    title= title
+    title JobScheduler - Login
+    link(rel='stylesheet' type='text/css' href='/vendor/css/index.css')
   body
-    h1= message
+    h2 LOGIN
+    .login
+      form#login(method='get' action='login.php')
+        label
+          b
+            | Username
+        input#Uname(type='text' name='Uname' placeholder='Username')
+        br
+        br
+        label
+          b
+            | Password
+        input#Pass(type='Password' name='Pass' placeholder='Password')
+        br
+        br
+        input#log(type='button' name='log' value='Log In Here')

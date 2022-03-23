@@ -1,0 +1,9 @@
+{
+  "name": "Session",
+  "properties": {
+    "token":{
+      "type":"String",
+      "required": true
+    }
+  }
+}

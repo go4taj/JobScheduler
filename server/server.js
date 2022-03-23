@@ -4,12 +4,22 @@
 // License text available at https://opensource.org/licenses/MIT
 
 'use strict';
-
+const path = require('path');
 const loopback = require('loopback');
 const boot = require('loopback-boot');
+var bodyParser = require('body-parser');
+const dotenv = require('dotenv');
+
+// Setup environment
+dotenv.config();
 
 const app = module.exports = loopback();
+
+// Template engine and static files
 app.set('view engine', 'pug');
+app.use('/vendor', loopback.static(path.join(__dirname, '..', 'vendor')));
+
+app.use(bodyParser.json());
 
 app.start = function() {
   // start the web server
