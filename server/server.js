@@ -20,6 +20,7 @@ app.set('view engine', 'pug');
 app.use('/vendor', loopback.static(path.join(__dirname, '..', 'vendor')));
 
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
 
 app.start = function() {
   // start the web server

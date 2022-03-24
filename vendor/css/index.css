@@ -67,3 +67,15 @@ a{
     color:#4a7599
     /* background-color: grey; */
 }  
+
+#error {
+  display: block;
+  margin:auto;
+  width: 300px;
+  font-size: 12;
+  color:rgb(209, 168, 93);
+  height: 30px;
+  border: none;
+  border-radius: 3px;
+  padding-left: 8px;
+}
