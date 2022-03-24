@@ -8,6 +8,7 @@ $(document).ready(function() {
   });
 });
 
+
 function logout() {
   localStorage.removeItem('token');
   window.location.href = '/';

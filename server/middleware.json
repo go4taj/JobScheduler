@@ -3,6 +3,7 @@
     "loopback#favicon": {}
   },
   "initial": {
+    "./middleware/authMiddleware": {},
     "compression": {},
     "helmet#xssFilter": {},
     "helmet#frameguard": {

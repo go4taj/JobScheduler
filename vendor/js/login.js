@@ -11,7 +11,7 @@ $('#login').submit(e=>{
   $.post('/api/login', user, function(result) {
     if (result.token) {
       localStorage.setItem('token', result.token);
-      window.location.href = '/dashboard';
+      window.location.href = '/dashboard?token=' + result.token;
     }
   }).fail(function(result) {
     $('#error').html(result.responseJSON.message);
