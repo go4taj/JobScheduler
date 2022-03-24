@@ -1,0 +1,36 @@
+{
+  "name": "jobs",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "required": true,
+      "default": "IN_QUEUE"
+    },
+    "info": {
+      "type": "object",
+      "required": true,
+      "default": {}
+    },
+    "createdAt": {
+      "type": "date",
+      "required": true,
+      "default":"$now"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

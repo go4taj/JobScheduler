@@ -7,3 +7,8 @@ $(document).ready(function() {
     'paging': false,
   });
 });
+
+function logout() {
+  localStorage.removeItem('token');
+  window.location.href = '/';
+}

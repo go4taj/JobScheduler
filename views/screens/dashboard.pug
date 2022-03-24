@@ -14,123 +14,24 @@ html
           thead
             tr
               th Name
-              th Position
-              th Office
-              th Age
-              th Start date
-              th Salary
+              th Description
+              th Status
+              th Info
+              th Created At
           tbody
-            tr
-              td Zenaida Frank
-              td Software Engineer
-              td New York
-              td 63
-              td 2010/01/04
-              td $125,250
-            tr
-              td Zorita Serrano
-              td Software Engineer
-              td San Francisco
-              td 56
-              td 2012/06/01
-              td $115,000
-            tr
-              td Jennifer Acosta
-              td Junior Javascript Developer
-              td Edinburgh
-              td 43
-              td 2013/02/01
-              td $75,650
-            tr
-              td Zenaida Frank
-              td Software Engineer
-              td New York
-              td 63
-              td 2010/01/04
-              td $125,250
-            tr
-              td Zorita Serrano
-              td Software Engineer
-              td San Francisco
-              td 56
-              td 2012/06/01
-              td $115,000
-            tr
-              td Jennifer Acosta
-              td Junior Javascript Developer
-              td Edinburgh
-              td 43
-              td 2013/02/01
-              td $75,650
-            tr
-              td Cara Stevens
-              td Sales Assistant
-              td New York
-              td 46
-              td 2011/12/06
-              td $145,600
-            tr
-              td Hermione Butler
-              td Regional Director
-              td London
-              td 47
-              td 2011/03/21
-              td $356,250
-            tr
-              td Lael Greer
-              td Systems Administrator
-              td London
-              td 21
-              td 2009/02/27
-              td $103,500
-            tr
-              td Jonas Alexander
-              td Developer
-              td San Francisco
-              td 30
-              td 2010/07/14
-              td $86,500
-            tr
-              td Shad Decker
-              td Regional Director
-              td Edinburgh
-              td 51
-              td 2008/11/13
-              td $183,000
-            tr
-              td Michael Bruce
-              td Javascript Developer
-              td Singapore
-              td 29
-              td 2011/06/27
-              td $183,000
-            tr
-              td Donna Snider
-              td Customer Support
-              td New York
-              td 27
-              td 2011/01/25
-              td $112,000
-            tr
-              td Michael Bruce
-              td Javascript Developer
-              td Singapore
-              td 29
-              td 2011/06/27
-              td $183,000
-            tr
-              td Donna Snider
-              td Customer Support
-              td New York
-              td 27
-              td 2011/01/25
-              td $112,000
+            each job in jobs
+              tr
+                td !{job.name}
+                td !{job.description}
+                td !{job.status}
+                td
+                  code !{JSON.stringify(job.info)}
+                td !{job.createdAt.toLocaleString()}
           tfoot
             tr
               th Name
-              th Position
-              th Office
-              th Age
-              th Start date
-              th Salary
+              th Description
+              th Status
+              th Info
+              th Created At
     script(src="/vendor/js/dashboard.js")

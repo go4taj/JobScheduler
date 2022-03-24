@@ -37,5 +37,9 @@
   },
   "Session": {
     "dataSource": "db"
+  },
+  "jobs": {
+    "dataSource": "db",
+    "public": true
   }
 }

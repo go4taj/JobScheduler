@@ -1,9 +1,13 @@
 {
   "name": "Session",
   "properties": {
-    "token":{
-      "type":"String",
+    "token": {
+      "type": "String",
       "required": true
     }
-  }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
 }
