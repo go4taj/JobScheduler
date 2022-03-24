@@ -5,7 +5,10 @@ module.exports = function(server) {
   const router = server.loopback.Router();
   router.get('/ping', server.loopback.status());
   router.get('/', (req, res) => {
-    res.render('index', {title: 'Hey', message: 'Hello there!'});
+    res.render('index', {title: 'Login'});
+  });
+  router.get('/dashboard', (req, res) => {
+    res.render('screens/dashboard', {title: 'Dashboard'});
   });
   server.use(router);
 };

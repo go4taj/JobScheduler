@@ -1,0 +1,19 @@
+body
+    h2 LOGIN
+    .login
+      form#login(name="login")
+        label
+          b
+            | Email
+        input#Uname(type='text' name='email' placeholder='Email')
+        br
+        br
+        label
+          b
+            | Password
+        input#Pass(type='password' name='password' placeholder='Password')
+        br
+        br
+        label#error
+        input#log(type='submit' name='log' value='Log In Here')
+    script(src="/vendor/js/login.js")

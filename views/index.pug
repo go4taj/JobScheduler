@@ -1,25 +1,4 @@
 doctype html
 html
-  head
-    title JobScheduler - Login
-    link(rel='stylesheet' type='text/css' href='/vendor/css/index.css')
-    script(src="/vendor/js/jquery-3.6.0.min.js")
-  body
-    h2 LOGIN
-    .login
-      form#login(name="login")
-        label
-          b
-            | Email
-        input#Uname(type='text' name='email' placeholder='Email')
-        br
-        br
-        label
-          b
-            | Password
-        input#Pass(type='password' name='password' placeholder='Password')
-        br
-        br
-        label#error
-        input#log(type='submit' name='log' value='Log In Here')
-    script(src="/vendor/js/login.js")
+  include layout/_header.pug
+  include screens/login.pug
