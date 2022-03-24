@@ -13,25 +13,33 @@ html
         table#example.display
           thead
             tr
-              th Name
-              th Description
-              th Status
-              th Info
-              th Created At
+              th.text-center Name
+              th.text-center Description
+              th.text-center Status
+              th.text-center Info
+              th.text-center Error
+              th.text-center Created At
           tbody
             each job in jobs
               tr
-                td !{job.name}
-                td !{job.description}
-                td !{job.status}
-                td
+                td.text-center !{job.name}
+                td.text-center !{job.description}
+                - var className = '';
+                - if(job.status=='IN_QUEUE') clasName='text-primary';
+                - if(job.status=='IN_PROCESS') clasName='text-warning';
+                - if(job.status=='FAILED') clasName='text-danger';
+                - if(job.status=='COMPLETE') clasName='text-success';
+                td.text-center(class=clasName) !{job.status}
+                td.text-center
                   code !{JSON.stringify(job.info)}
-                td !{job.createdAt.toLocaleString()}
+                td.text-center !{job.error}
+                td.text-center !{job.createdAt.toLocaleString()}
           tfoot
             tr
-              th Name
-              th Description
-              th Status
-              th Info
-              th Created At
+              th.text-center Name
+              th.text-center Description
+              th.text-center Status
+              th.text-center Info
+              th.text-center Error
+              th.text-center Created At
     script(src="/vendor/js/dashboard.js")

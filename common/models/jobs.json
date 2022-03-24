@@ -23,6 +23,9 @@
       "required": true,
       "default": {}
     },
+    "error":{
+      "type": "string"
+    },
     "createdAt": {
       "type": "date",
       "required": true,

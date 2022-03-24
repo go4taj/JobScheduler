@@ -8,7 +8,7 @@ module.exports = function(server) {
     res.render('index', {title: 'Login'});
   });
   router.get('/dashboard', (req, res) => {
-    req.app.models.jobs.find({}, (err, jobs)=>{
+    req.app.models.jobs.find({order: 'id desc'}, (err, jobs)=>{
       res.render('screens/dashboard', {title: 'Dashboard', jobs});
     });
   });

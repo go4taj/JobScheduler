@@ -1,3 +1,9 @@
 {
-  "INVALID_LOGIN":"Invalid email or password"
+  "INVALID_LOGIN":"Invalid email or password",
+  "STATUS":{
+    "IN_QUEUE":"IN_QUEUE",
+    "IN_PROCESS": "IN_PROCESS",
+    "FAILED" : "FAILED",
+    "COMPLETE":"COMPLETE"
+  }
 }
