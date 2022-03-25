@@ -4,6 +4,7 @@ module.exports = function(options) {
   return function customHandler(req, res, next) {
     var ignoreRequest = req.path.startsWith('/api') ||
     req.path == '/' ||
+    req.path == '/explorer' ||
     req.path.startsWith('/vendor');
     if (!ignoreRequest) {
       var sessionToken = req.headers.token || req.query.token;
