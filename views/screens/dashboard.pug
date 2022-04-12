@@ -15,15 +15,18 @@ html
             tr
               th.text-center Name
               th.text-center Description
+              th.text-center Retries
               th.text-center Status
               th.text-center Info
               th.text-center Error
               th.text-center Created At
+              th.text-center Updated At
           tbody
             each job in jobs
               tr
                 td.text-center !{job.name}
                 td.text-center !{job.description}
+                td.text-center !{job.retries}
                 - var className = '';
                 - if(job.status=='IN_QUEUE') clasName='text-primary';
                 - if(job.status=='IN_PROCESS') clasName='text-warning';
@@ -34,12 +37,15 @@ html
                   code !{JSON.stringify(job.info)}
                 td.text-center !{job.error}
                 td.text-center !{job.createdAt.toLocaleString()}
+                td.text-center !{job.updatedAt.toLocaleString()}
           tfoot
             tr
               th.text-center Name
               th.text-center Description
+              th.text-center Retries
               th.text-center Status
               th.text-center Info
               th.text-center Error
               th.text-center Created At
+              th.text-center Updated At
     script(src="/vendor/js/dashboard.js")
